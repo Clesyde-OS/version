@@ -46,7 +46,7 @@
     "4": "4.20",
     "3": "3.13"
   },
-  "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
+  "ota": "https://github.com/clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
   "cli": "2022.05.0",
   "dns": "2022.04.1",
   "audio": "2022.05.0",
