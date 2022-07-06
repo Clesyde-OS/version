@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "supervisor": "2022.05.3",
+  "supervisor": "2022.06.1",
   "homeassistant": {
     "default": "2022.6.0",
     "qemux86": "2022.6.0",
@@ -23,21 +23,21 @@
     "odroid-xu": "2022.6.0"
   },
   "hassos": {
-    "ova": "8.1",
-    "rpi2": "8.1",
-    "rpi3": "8.1",
-    "rpi3-64": "8.1",
-    "rpi4": "8.1",
-    "rpi4-64": "8.1",
-    "yellow": "8.1",
-    "tinker": "8.1",
-    "odroid-c2": "8.1",
-    "odroid-c4": "8.1",
-    "odroid-n2": "8.1",
-    "odroid-xu4": "8.1",
-    "generic-x86-64": "8.1",
-    "generic-aarch64": "8.1",
-    "khadas-vim3": "8.1"
+    "ova": "8.0",
+    "rpi2": "8.0",
+    "rpi3": "8.0",
+    "rpi3-64": "8.0",
+    "rpi4": "8.0",
+    "rpi4-64": "8.0",
+    "yellow": "8.0",
+    "tinker": "8.0",
+    "odroid-c2": "8.0",
+    "odroid-c4": "8.0",
+    "odroid-n2": "8.0",
+    "odroid-xu4": "8.0",
+    "generic-x86-64": "8.0",
+    "generic-aarch64": "8.0",
+    "khadas-vim3": "8.0"
   },
   "hassos-upgrade": {
     "7": "7.6",
@@ -46,8 +46,8 @@
     "4": "4.20",
     "3": "3.13"
   },
-  "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
-  "cli": "2022.05.0",
+  "ota": "",
+  "cli": "2022.06.0",
   "dns": "2022.04.1",
   "audio": "2022.05.0",
   "multicast": "2022.02.0",
