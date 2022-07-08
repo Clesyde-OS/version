@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "supervisor": "2022.06.1",
+  "supervisor": "2022.06.2",
   "homeassistant": {
     "default": "2022.6.0",
     "qemux86": "2022.6.0",
@@ -53,13 +53,13 @@
   "multicast": "2022.02.0",
   "observer": "2021.10.0",
   "image": {
-    "core": "homeassistant/{machine}-homeassistant",
-    "supervisor": "homeassistant/{arch}-hassio-supervisor",
-    "cli": "homeassistant/{arch}-hassio-cli",
-    "audio": "homeassistant/{arch}-hassio-audio",
-    "dns": "homeassistant/{arch}-hassio-dns",
-    "observer": "homeassistant/{arch}-hassio-observer",
-    "multicast": "homeassistant/{arch}-hassio-multicast"
+    "core": "clesyde/{machine}-homeassistant",
+    "supervisor": "clesyde/{arch}-hassio-supervisor",
+    "cli": "clesyde/{arch}-hassio-cli",
+    "audio": "clesyde/{arch}-hassio-audio",
+    "dns": "clesyde/{arch}-hassio-dns",
+    "observer": "clesyde/{arch}-hassio-observer",
+    "multicast": "clesyde/{arch}-hassio-multicast"
   },
   "images": {
     "core": "ghcr.io/clesyde/{machine}-homeassistant",
