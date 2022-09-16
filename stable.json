@@ -12,7 +12,7 @@
   "hassos-upgrade": {
     "7": "7.6"
   },
-  "ota": "",
+  "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
   "cli": "2022.06.0",
   "dns": "2022.04.1",
   "audio": "2022.05.0",
