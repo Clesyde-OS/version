@@ -2,7 +2,7 @@
   "channel": "stable",
   "supervisor": "2022.09.1",
   "homeassistant": {
-    "raspberrypi4-64": "2022.10.2",
+    "raspberrypi4-64": "2022.9.6",
     "generic-x86-64": "2022.9.6"
   },
   "hassos": {
