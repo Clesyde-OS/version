@@ -1,19 +1,19 @@
 {
   "channel": "stable",
-  "supervisor": "2022.07.0",
+  "supervisor": "2022.09.1",
   "homeassistant": {
-    "raspberrypi4-64": "2022.7.3",
-    "generic-x86-64": "2022.7.3"
+    "raspberrypi4-64": "2022.10.3",
+    "generic-x86-64": "2022.10.3"
   },
   "hassos": {
-    "rpi4-64": "8.0",
-    "generic-x86-64": "8.0"
+    "rpi4-64": "9.0",
+    "generic-x86-64": "9.0"
   },
   "hassos-upgrade": {
     "7": "7.6"
   },
   "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
-  "cli": "2022.06.0",
+  "cli": "2022.08.0",
   "dns": "2022.04.1",
   "audio": "2022.05.0",
   "multicast": "2022.02.0",
