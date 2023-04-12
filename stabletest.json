@@ -20,7 +20,7 @@
   "multicast": "2022.02.0",
   "observer": "2021.10.0",
   "image": {
-    "core": "homeassistant/{machine}-homeassistant",
+    "core": "clesyde/{machine}-homeassistant",
     "supervisor": "clesyde/{arch}-hassio-supervisor",
     "cli": "clesyde/{arch}-hassio-cli",
     "audio": "clesyde/{arch}-hassio-audio",
@@ -29,7 +29,7 @@
     "multicast": "clesyde/{arch}-hassio-multicast"
   },
   "images": {
-    "core": "ghcr.io/home-assistant/{machine}-homeassistant",
+    "core": "ghcr.io/clesyde/{machine}-homeassistant",
     "supervisor": "ghcr.io/clesyde/{arch}-hassio-supervisor",
     "cli": "ghcr.io/clesyde/{arch}-hassio-cli",
     "audio": "ghcr.io/clesyde/{arch}-hassio-audio",
