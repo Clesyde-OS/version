@@ -1,12 +1,12 @@
 {
-  "channel": "beta",
-  "supervisor": "2023.03.1",
+  "channel": "stable",
+  "supervisor": "2023.04.1",
   "homeassistant": {
     "raspberrypi4-64": "2023.5.4",
     "generic-x86-64": "2023.3.5"
   },
   "hassos": {
-    "rpi4-64": "10.1.1",
+    "rpi4-64": "10.1",
     "generic-x86-64": "9.0"
   },
   "hassos-upgrade": {
@@ -19,21 +19,21 @@
   "multicast": "2022.02.0",
   "observer": "2021.10.0",
   "image": {
-    "core": "clesyde/{machine}-homeassistant",
-    "supervisor": "clesyde/{arch}-hassio-supervisor",
-    "cli": "clesyde/{arch}-hassio-cli",
-    "audio": "clesyde/{arch}-hassio-audio",
-    "dns": "clesyde/{arch}-hassio-dns",
-    "observer": "clesyde/{arch}-hassio-observer",
-    "multicast": "clesyde/{arch}-hassio-multicast"
+    "core": "homeassistant/{machine}-homeassistant",
+    "supervisor": "homeassistant/{arch}-hassio-supervisor",
+    "cli": "homeassistant/{arch}-hassio-cli",
+    "audio": "homeassistant/{arch}-hassio-audio",
+    "dns": "homeassistant/{arch}-hassio-dns",
+    "observer": "homeassistant/{arch}-hassio-observer",
+    "multicast": "homeassistant/{arch}-hassio-multicast"
   },
   "images": {
-    "core": "ghcr.io/clesyde/{machine}-homeassistant",
-    "supervisor": "ghcr.io/clesyde/{arch}-hassio-supervisor",
-    "cli": "ghcr.io/clesyde/{arch}-hassio-cli",
-    "audio": "ghcr.io/clesyde/{arch}-hassio-audio",
-    "dns": "ghcr.io/clesyde/{arch}-hassio-dns",
-    "observer": "ghcr.io/clesyde/{arch}-hassio-observer",
-    "multicast": "ghcr.io/clesyde/{arch}-hassio-multicast"
+    "core": "ghcr.io/home-assistant/{machine}-homeassistant",
+    "supervisor": "ghcr.io/home-assistant/{arch}-hassio-supervisor",
+    "cli": "ghcr.io/home-assistant/{arch}-hassio-cli",
+    "audio": "ghcr.io/home-assistant/{arch}-hassio-audio",
+    "dns": "ghcr.io/home-assistant/{arch}-hassio-dns",
+    "observer": "ghcr.io/home-assistant/{arch}-hassio-observer",
+    "multicast": "ghcr.io/home-assistant/{arch}-hassio-multicast"
   }
 }
