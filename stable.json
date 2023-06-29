@@ -6,7 +6,7 @@
     "generic-x86-64": "2023.3.5"
   },
   "hassos": {
-    "rpi4-64": "10.2",
+    "rpi4-64": "10.3",
     "generic-x86-64": "9.0"
   },
   "hassos-upgrade": {
