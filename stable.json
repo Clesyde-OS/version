@@ -21,7 +21,7 @@
   "image": {
     "core": "clesyde/{machine}-homeassistant",
     "supervisor": "clesyde/{arch}-hassio-supervisor",
-    "cli": "homeassistant/{arch}-hassio-cli"",
+    "cli": "homeassistant/{arch}-hassio-cli",
     "audio": "clesyde/{arch}-hassio-audio",
     "dns": "clesyde/{arch}-hassio-dns",
     "observer": "clesyde/{arch}-hassio-observer",
