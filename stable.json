@@ -21,7 +21,7 @@
   "image": {
     "core": "clesyde/{machine}-homeassistant",
     "supervisor": "clesyde/{arch}-hassio-supervisor",
-    "cli": "homeassistant/{arch}-hassio-cli",
+    "cli": "clesyde/{arch}-hassio-cli",
     "audio": "clesyde/{arch}-hassio-audio",
     "dns": "clesyde/{arch}-hassio-dns",
     "observer": "clesyde/{arch}-hassio-observer",
@@ -30,7 +30,7 @@
   "images": {
     "core": "ghcr.io/clesyde/{machine}-homeassistant",
     "supervisor": "ghcr.io/clesyde/{arch}-hassio-supervisor",
-    "cli": "ghcr.io/home-assistant/{arch}-hassio-cli",
+    "cli": "ghcr.io/clesyde/{arch}-hassio-cli",
     "audio": "ghcr.io/clesyde/{arch}-hassio-audio",
     "dns": "ghcr.io/clesyde/{arch}-hassio-dns",
     "observer": "ghcr.io/clesyde/{arch}-hassio-observer",
