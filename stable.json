@@ -1,8 +1,8 @@
 {
   "channel": "stable",
-  "supervisor": "2023.06.4",
+  "supervisor": "2023.08.3",
   "homeassistant": {
-    "raspberrypi4-64": "2023.6.2",
+    "raspberrypi4-64": "2023.8.2",
     "generic-x86-64": "2023.3.5"
   },
   "hassos": {
@@ -13,7 +13,7 @@
     "7": "7.6"
   },
   "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
-  "cli": "2023.05.0",
+  "cli": "2023.06.0",
   "dns": "2022.04.1",
   "audio": "2022.07.0",
   "multicast": "2022.02.0",
