@@ -17,7 +17,7 @@
   "dns": "2023.06.2",
   "audio": "2023.06.0",
   "multicast": "2023.06.2",
-  "observer": "2021.10.0",
+  "observer": "2023.06.0",
   "image": {
     "core": "clesyde/{machine}-homeassistant",
     "supervisor": "clesyde/{arch}-hassio-supervisor",
