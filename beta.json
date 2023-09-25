@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "supervisor": "2023.09.2",
+  "supervisor": "2023.09.3",
   "homeassistant": {
     "raspberrypi4-64": "2023.9.2",
     "generic-x86-64": "2023.3.5"
