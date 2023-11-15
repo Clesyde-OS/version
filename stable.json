@@ -12,7 +12,7 @@
   "hassos-upgrade": {
     "10": "10.5"
   },
-  "ota": "https://github.com/home-assistant/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
+  "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
   "cli": "2023.10.0",
   "dns": "2023.06.2",
   "audio": "2023.06.0",
