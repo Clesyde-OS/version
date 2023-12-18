@@ -6,13 +6,13 @@
     "generic-x86-64": "2023.11.3"
   },
   "hassos": {
-    "rpi4-64": "10.5",
-    "generic-x86-64": "11.0"
+    "rpi4-64": "11.2",
+    "generic-x86-64": "11.2"
   },
   "hassos-upgrade": {
     "7": "7.6"
   },
-  "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}",
+  "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
   "cli": "2023.10.0",
   "dns": "2023.06.2",
   "audio": "2023.06.0",
