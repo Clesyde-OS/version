@@ -1,0 +1,39 @@
+{
+  "channel": "dev",
+  "supervisor": "2023.11.6",
+  "homeassistant": {
+    "raspberrypi4-64": "2023.11.2",
+    "generic-x86-64": "2024.1.2"
+  },
+  "hassos": {
+    "rpi4-64": "11.2",
+    "generic-x86-64": "11.2"
+  },
+  "hassos-upgrade": {
+    "7": "7.6"
+  },
+  "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
+  "cli": "2023.10.0",
+  "dns": "2023.06.2",
+  "audio": "2023.06.0",
+  "multicast": "2023.06.2",
+  "observer": "2023.06.0",
+  "image": {
+    "core": "clesyde/{machine}-homeassistant",
+    "supervisor": "clesyde/{arch}-hassio-supervisor",
+    "cli": "clesyde/{arch}-hassio-cli",
+    "audio": "clesyde/{arch}-hassio-audio",
+    "dns": "clesyde/{arch}-hassio-dns",
+    "observer": "clesyde/{arch}-hassio-observer",
+    "multicast": "clesyde/{arch}-hassio-multicast"
+  },
+  "images": {
+    "core": "ghcr.io/clesyde/{machine}-homeassistant",
+    "supervisor": "ghcr.io/clesyde/{arch}-hassio-supervisor",
+    "cli": "ghcr.io/clesyde/{arch}-hassio-cli",
+    "audio": "ghcr.io/clesyde/{arch}-hassio-audio",
+    "dns": "ghcr.io/clesyde/{arch}-hassio-dns",
+    "observer": "ghcr.io/clesyde/{arch}-hassio-observer",
+    "multicast": "ghcr.io/clesyde/{arch}-hassio-multicast"
+  }
+}
