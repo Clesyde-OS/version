@@ -3,7 +3,7 @@
   "supervisor": "2023.11.6",
   "homeassistant": {
     "raspberrypi4-64": "2024.4.2",
-    "generic-x86-64": "2024.4.2"
+    "generic-x86-64": "2024.6.2"
   },
   "hassos": {
     "rpi4-64": "12.0",
