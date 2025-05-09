@@ -2,8 +2,8 @@
   "channel": "beta",
   "supervisor": "2024.12.3",
   "homeassistant": {
-    "raspberrypi4-64": "2025.4.4",
-    "generic-x86-64": "2025.4.4"
+    "raspberrypi4-64": "2025.5.0",
+    "generic-x86-64": "2025.5.0"
   },
   "hassos": {
     "rpi4-64": "14.1",
