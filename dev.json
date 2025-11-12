@@ -1,22 +1,22 @@
 {
   "channel": "dev",
-  "supervisor": "2023.11.6",
+  "supervisor": "2025.11.2",
   "homeassistant": {
-    "raspberrypi4-64": "2024.2.3",
-    "generic-x86-64": "2024.2.3"
+    "raspberrypi4-64": "20251105.0-test",
+    "generic-x86-64": "2025.10.4"
   },
   "hassos": {
-    "rpi4-64": "11.2",
-    "generic-x86-64": "11.2"
+    "rpi4-64": "14.1",
+    "generic-x86-64": "14.1"
   },
   "hassos-upgrade": {
     "7": "7.6"
   },
   "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
-  "cli": "2023.10.0",
-  "dns": "2023.06.2",
-  "audio": "2023.06.0",
-  "multicast": "2023.06.2",
+  "cli": "2024.05.0",
+  "dns": "2024.04.0",
+  "audio": "2023.12.0",
+  "multicast": "2024.03.0",
   "observer": "2023.06.0",
   "image": {
     "core": "clesyde/{machine}-homeassistant",
