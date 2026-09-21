@@ -6,34 +6,34 @@
     "generic-x86-64": "2026.2.1"
   },
   "hassos": {
-    "rpi4-64": "14.1",
+    "rpi4-64": "18.1",
     "generic-x86-64": "14.1"
   },
   "hassos-upgrade": {
     "7": "7.6"
   },
-  "ota": "https://github.com/Clesyde/operating-system/releases/download/{version}/{os_name}_{board}-{version}.raucb",
+  "ota": "https://github.com/Clesyde-OS/operating-system-releases/releases/download/{version}/{os_name}_{board}-{version}.raucb",
   "cli": "2024.05.0",
   "dns": "2024.04.0",
   "audio": "2023.12.0",
   "multicast": "2024.03.0",
   "observer": "2023.06.0",
   "image": {
-    "core": "clesyde/{machine}-homeassistant",
-    "supervisor": "clesyde/{arch}-hassio-supervisor",
-    "cli": "clesyde/{arch}-hassio-cli",
-    "audio": "clesyde/{arch}-hassio-audio",
-    "dns": "clesyde/{arch}-hassio-dns",
-    "observer": "clesyde/{arch}-hassio-observer",
-    "multicast": "clesyde/{arch}-hassio-multicast"
+    "core": "clesyde-os/{machine}-homeassistant",
+    "supervisor": "clesyde-os/{arch}-hassio-supervisor",
+    "cli": "clesyde-os/{arch}-hassio-cli",
+    "audio": "clesyde-os/{arch}-hassio-audio",
+    "dns": "clesyde-os/{arch}-hassio-dns",
+    "observer": "clesyde-os/{arch}-hassio-observer",
+    "multicast": "clesyde-os/{arch}-hassio-multicast"
   },
   "images": {
-    "core": "ghcr.io/clesyde/{machine}-homeassistant",
-    "supervisor": "ghcr.io/clesyde/{arch}-hassio-supervisor",
-    "cli": "ghcr.io/clesyde/{arch}-hassio-cli",
-    "audio": "ghcr.io/clesyde/{arch}-hassio-audio",
-    "dns": "ghcr.io/clesyde/{arch}-hassio-dns",
-    "observer": "ghcr.io/clesyde/{arch}-hassio-observer",
-    "multicast": "ghcr.io/clesyde/{arch}-hassio-multicast"
+    "core": "ghcr.io/clesyde-os/{machine}-homeassistant",
+    "supervisor": "ghcr.io/clesyde-os/{arch}-hassio-supervisor",
+    "cli": "ghcr.io/clesyde-os/{arch}-hassio-cli",
+    "audio": "ghcr.io/clesyde-os/{arch}-hassio-audio",
+    "dns": "ghcr.io/clesyde-os/{arch}-hassio-dns",
+    "observer": "ghcr.io/clesyde-os/{arch}-hassio-observer",
+    "multicast": "ghcr.io/clesyde-os/{arch}-hassio-multicast"
   }
 }
