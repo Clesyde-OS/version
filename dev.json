@@ -2,7 +2,7 @@
   "channel": "dev",
   "supervisor": "2026.10.2.dev1",
   "homeassistant": {
-    "raspberrypi4-64": "2026.10.2.dev1",
+    "raspberrypi4-64": "2026.10.2.dev2",
     "generic-x86-64": "2026.2.1"
   },
   "hassos": {
