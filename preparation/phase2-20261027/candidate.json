@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-10-27",
+  "status": "blocked_pending_explicit_core_supervisor_2026_10_4_acceptance",
+  "live_channel_changed": false,
+  "upstream_version_commit": "c71d83cb1169272908c30febd3eef7937574779e",
+  "frozen_channel_sha256": {
+    "dev": "22f4bf11a75835adb6cb5724c5c9c911f6a107ec13e013f4c4248c9de210800e",
+    "beta": "d0970699dd2a070f9d3b37099aed59f798ae6466986cbee8903a368f21a9ad7b",
+    "stable": "240f3d1bfad16585865157a3680240590ae24efff0f5781c96a5f4ba81cd32b1"
+  },
+  "scope": [
+    "cli",
+    "dns",
+    "audio",
+    "multicast",
+    "observer"
+  ],
+  "targets": {
+    "cli": {
+      "current_dev": "2024.05.0",
+      "candidate_version": "2026.10.1",
+      "distribution": "clesyde_rebrand",
+      "image_template": "ghcr.io/clesyde-os/{arch}-hassio-cli",
+      "official_reference_images": {
+        "aarch64": {
+          "image": "ghcr.io/home-assistant/aarch64-hassio-cli",
+          "version": "2026.10.1",
+          "tag_digest": "sha256:23441d3668cb9edad0af0eb0ba2f683d777fed9fdc09dbc47e78bb19d4670603",
+          "manifest_digest": "sha256:4a501a68a3edf974d50d9d69dbefbed76dfac882e870c566e2773083327e14f2",
+          "config_digest": "sha256:bf5bd4b8c6c1a5e47552c9e2e15ad0f70bc077a3c2c74e8f1ae8d39f0c1b0022",
+          "platform": "linux/arm64",
+          "anonymous_pull": true
+        },
+        "amd64": {
+          "image": "ghcr.io/home-assistant/amd64-hassio-cli",
+          "version": "2026.10.1",
+          "tag_digest": "sha256:9f143c8675fbc549ce199b197dccc7281ba8530a03cd94461e9a3ecfe947130e",
+          "manifest_digest": "sha256:58caae68d1f0bc8389a26e0960b80ab56dc73739c60fe1daa17b2652c806d8fd",
+          "config_digest": "sha256:61b97877dbe3a3488d2c97529c36e6de677f547c178898a54e96d7c3cab17b19",
+          "platform": "linux/amd64",
+          "anonymous_pull": true
+        }
+      }
+    },
+    "dns": {
+      "current_dev": "2024.04.0",
+      "candidate_version": "2026.10.0",
+      "distribution": "upstream_unchanged",
+      "image_template": "ghcr.io/home-assistant/{arch}-hassio-dns",
+      "official_reference_images": {
+        "aarch64": {
+          "image": "ghcr.io/home-assistant/aarch64-hassio-dns",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:a934744305ddcdeb17e66ea8275e51c56ed2e68d4281f94a0d913a26be435a55",
+          "manifest_digest": "sha256:7a8b6196921fc51e8d8831c56a96960b931e10a2759ff39769b4ead16fcec387",
+          "config_digest": "sha256:b7fabaa68e4a4ebc5e3051a6ba1c215987a984cdc116a4681b9880c258dd474a",
+          "platform": "linux/arm64",
+          "anonymous_pull": true
+        },
+        "amd64": {
+          "image": "ghcr.io/home-assistant/amd64-hassio-dns",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:cf8d88c7f111ba4a3a3df5fc2aaf6d8365f206ef4ef173581bb13eabee4c55d9",
+          "manifest_digest": "sha256:b6a3f352763a92f3938920c5a549cbc88fc2a992a0652c4b526495494300606b",
+          "config_digest": "sha256:346cfcb26e62fa2a4168aa7c155c6cb67118f2a26016161461a0f264ef899bd9",
+          "platform": "linux/amd64",
+          "anonymous_pull": true
+        }
+      }
+    },
+    "audio": {
+      "current_dev": "2023.12.0",
+      "candidate_version": "2026.10.0",
+      "distribution": "upstream_unchanged",
+      "image_template": "ghcr.io/home-assistant/{arch}-hassio-audio",
+      "official_reference_images": {
+        "aarch64": {
+          "image": "ghcr.io/home-assistant/aarch64-hassio-audio",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:d74fd89ac0797614ca0b92291f93151fa5f05d5ce272b814593ec4a11adb3a75",
+          "manifest_digest": "sha256:8e815ce9e472e2606af2cf5488e6f0345aabca010fb3d60a248f96782ee6fb16",
+          "config_digest": "sha256:c97ad9abf12b8081b11052d289ed3d11d558caedf7095e1790fea990c1632da8",
+          "platform": "linux/arm64",
+          "anonymous_pull": true
+        },
+        "amd64": {
+          "image": "ghcr.io/home-assistant/amd64-hassio-audio",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:d20dd174a18e1c9f5d8056d7b6f160d468c37cf193fd5648a9db3d9c9ed0cf9d",
+          "manifest_digest": "sha256:3597c93138ae2a82c18e08dbfec8bd8429c29a17fcc899e8521d97b93ba97eed",
+          "config_digest": "sha256:275fb2ddc2e85b2ed35f625be6f3b2548cabb04bab9b4173437c6ca7ea6873b4",
+          "platform": "linux/amd64",
+          "anonymous_pull": true
+        }
+      }
+    },
+    "multicast": {
+      "current_dev": "2024.03.0",
+      "candidate_version": "2026.10.0",
+      "distribution": "upstream_unchanged",
+      "image_template": "ghcr.io/home-assistant/{arch}-hassio-multicast",
+      "official_reference_images": {
+        "aarch64": {
+          "image": "ghcr.io/home-assistant/aarch64-hassio-multicast",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:28d29bebdca78e6255454e756009f295412fa517b4145a0f06ac783de745aa35",
+          "manifest_digest": "sha256:18718a5c3fbc9e09f5684b467385bb3897a6d8f9b5f1360860a5cdaa8877c6be",
+          "config_digest": "sha256:9682e2bae08bcf4efdab5c4a4de7b730d3002c936b6ae38c5763101406b867fc",
+          "platform": "linux/arm64",
+          "anonymous_pull": true
+        },
+        "amd64": {
+          "image": "ghcr.io/home-assistant/amd64-hassio-multicast",
+          "version": "2026.10.0",
+          "tag_digest": "sha256:35aa238e2eff73f7418f85ea75ae595f9d9165a8d3606b759ac3e883951ab848",
+          "manifest_digest": "sha256:419fddf8037824787abbe1ee95c948a22bd882cf649b6b691b2286f760226b61",
+          "config_digest": "sha256:99b35ab4d49b5def5b5adba084b19c6233b24a6dfd754e0d1cdb20ca27887a6b",
+          "platform": "linux/amd64",
+          "anonymous_pull": true
+        }
+      }
+    },
+    "observer": {
+      "current_dev": "2023.06.0",
+      "candidate_version": "2026.08.0",
+      "distribution": "upstream_unchanged",
+      "image_template": "ghcr.io/home-assistant/{arch}-hassio-observer",
+      "official_reference_images": {
+        "aarch64": {
+          "image": "ghcr.io/home-assistant/aarch64-hassio-observer",
+          "version": "2026.08.0",
+          "tag_digest": "sha256:a1da54df071945e0c20918f6fc7641f5440d94eb6fdeb6eac797f937b28bf495",
+          "manifest_digest": "sha256:a50fbdb20b2efb54a2f3bdf98aab72d040e2b13b40835cf5bd9bb7c4fedc699b",
+          "config_digest": "sha256:badd8ccd0ac83842e1cf8a39837a0482d0e19f743873f66860ff788c63f00f3c",
+          "platform": "linux/arm64",
+          "anonymous_pull": true
+        },
+        "amd64": {
+          "image": "ghcr.io/home-assistant/amd64-hassio-observer",
+          "version": "2026.08.0",
+          "tag_digest": "sha256:30405318a2619a18b78332850deceab194d900692adf203e390f6868f39a9176",
+          "manifest_digest": "sha256:8141be04de213259156e38e3a8f3b8682ce948e41255dd8abbfac040a477995b",
+          "config_digest": "sha256:36b6e6f7341886a227b88fb5a52c7bd7bd060e7d6cdfbffb9677ac123ec37d5c",
+          "platform": "linux/amd64",
+          "anonymous_pull": true
+        }
+      }
+    }
+  }
+}

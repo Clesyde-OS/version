@@ -1,0 +1,14 @@
+name: Phase 2 preparation without channel activation
+on:
+  pull_request:
+    paths: ["preparation/phase2-20261027/**", ".github/workflows/phase2-preparation.yaml"]
+permissions:
+  contents: read
+jobs:
+  proposal:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: python3 preparation/phase2-20261027/validate.py
