@@ -1,0 +1,12 @@
+{
+  "local_patch_set": "cloud-lifecycle-provisioning-remote-reload-shadow-await-20261113",
+  "repository": "https://github.com/Clesyde-OS/cloud-lib.git",
+  "revision": "329cf89212c0c5f6e7cda362d7f2b083e9aa2e88",
+  "snapshot_manifest_sha256": "6d64a7c4d73600c755424a4155918d21b57b5260b850457087434ab358fb5032",
+  "snitun": "0.47.0",
+  "source_date_epoch": 1792491723,
+  "upstream_revision_is_base_only": true,
+  "version": "0.1.21.dev2",
+  "wheel": "clesyde_cloud_lib-0.1.21.dev2-py3-none-any.whl",
+  "sha256": "df5b39dd4d46bbc7145404759c6f97c95c2a7cd355b7ad8b137a85d357484916"
+}

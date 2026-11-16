@@ -1,0 +1,12 @@
+{
+  "upstream_commit": "e32bc0696ebefde323f5b791269ad0c57f3f99d9",
+  "patch_sha256": "7c2caf440e707d4e295d67a537756230a29fa544dc31dcb563fcd7634af0fb2d",
+  "files": {
+    "README.md": "77f3750ff342dfaa09196ad0011253593e4f8bf11a0e7f6cfead1c68a1310e37",
+    "SOURCES.sha256": "d4de2d70a058890cd4a0d5575ba553313fd3f7651aa4b6245babf2e80a425034",
+    "candidate.json": "ac3d65060754995f13286901f1a6a97987ea8b452932150161488b787a85f3b4",
+    "clesyde-frontend.patch": "7c2caf440e707d4e295d67a537756230a29fa544dc31dcb563fcd7634af0fb2d",
+    "rebuild.sh": "f0d3e98991050d3f990cae72350fe08509e40ebcaacb2b05ffd6945829517a3e",
+    "upstream.lock.json": "f9c8ea64f9eece2946162db4c6b63f9d2024ca35d66daad4e5a1ffa382627940"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "reference": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant@sha256:4b0a42e76329ca592dc711c697f9155a9714b98f9ed421b32d6877b72e4bebd1",
+  "tag": "2026.11.1.4",
+  "config_digest": "sha256:27a377dfa993c73a816d939a3727b801469634421daa8d3ed3a52dba01d10255",
+  "source_commit": "526e26f5a757b6e0c990835579766dfadf97213d",
+  "architecture": "aarch64",
+  "exact_native_tested_archive": true
+}

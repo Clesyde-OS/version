@@ -1,0 +1,29 @@
+name: Validate exact DEV BETA release
+on:
+  push:
+    branches: ["clesyde/release-dev-beta-20261113"]
+  pull_request:
+    branches: ["master"]
+    paths:
+      - dev.json
+      - beta.json
+      - releases/20261113/**
+      - .github/workflows/validate-release-20261113.yaml
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6
+        with:
+          cosign-release: v2.5.3
+      - name: Validate exact catalogs and release evidence
+        run: python3 releases/20261113/validate.py
+      - name: Verify all recorded artifact and installed-source signatures
+        run: python3 releases/20261113/verify-signatures.py

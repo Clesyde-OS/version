@@ -1,0 +1,8 @@
+{
+  "reference": "ghcr.io/clesyde-os/aarch64-hassio-supervisor@sha256:08bd2512193e1e43c942e0869f1edce0a90752a63f0b4bf712ab6fd4e1b94c3c",
+  "tag": "2026.11.0.6",
+  "config_digest": "sha256:8d89f3dc52065bdff7b11e0d2a64056fec34bd0756431920f855ceed266644c3",
+  "source_commit": "c0a411d2cc218169b98495d8b633f8497e54b70a",
+  "architecture": "aarch64",
+  "exact_native_tested_archive": true
+}
