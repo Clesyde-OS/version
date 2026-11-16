@@ -1,0 +1,1 @@
+{"critical":{"identity":{"docker-reference":"ghcr.io/clesyde-os/amd64-hassio-supervisor"},"image":{"docker-manifest-digest":"sha256:bc4003322c630603d9f38d38373cbd598d0bb0d32eba71a0d456268ec12f899e"},"type":"cosign container image signature"},"optional":null}
