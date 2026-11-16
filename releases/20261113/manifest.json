@@ -1,9 +1,10 @@
 {
-  "stage": "dev-validation",
+  "stage": "dev-beta-qualified",
   "prepared_at": "2026-11-16T10:32:43.114204+00:00",
   "catalog_base_commit": "0f9343f0b0ce76d9d4d5ed73590baa4283049520",
   "channels": [
-    "dev"
+    "dev",
+    "beta"
   ],
   "stable_publication": false,
   "stable_sha256": "240f3d1bfad16585865157a3680240590ae24efff0f5781c96a5f4ba81cd32b1",
@@ -126,8 +127,48 @@
     "database_migration_performed": false
   },
   "dev_acceptance": {
-    "result": "PENDING",
-    "reason": "The installed Supervisor restricts explicit versions to its catalog outside development mode. Activate DEV normally, then qualify the exact artifacts on the authorized DEV box before BETA."
+    "result": "PASS",
+    "exact_images": "PASS",
+    "cloud_entry_loaded": true,
+    "external_url_and_tunnel": "PASS",
+    "credentials_unchanged": 6,
+    "mqtt_roundtrip": "PASS",
+    "physical_isolated_cloud_cases": 12,
+    "shadow_get_handlers": 2,
+    "telemetry_confirmed_batches": 1,
+    "telemetry_series_per_minute": 6,
+    "logger_restored": true,
+    "core_restart": true,
+    "host_reboot_observed": true,
+    "store_installed_apps_attached": true,
+    "installed_app_versions_and_update_preferences_unchanged": true,
+    "ui": {
+      "date": "2026-11-16",
+      "result": "PASS",
+      "target": "authorized DEV box only",
+      "authenticated_settings_loaded": true,
+      "clesyde_branding_visible": true,
+      "installed_apps_page_loaded": true,
+      "installed_app_count": 16,
+      "store_loaded": true,
+      "clesyde_apps_group_visible": true,
+      "nonempty_local_apps_group_visible": true,
+      "upstream_groups_visible_on_dev": true,
+      "manual_external_repository_groups_visible": true,
+      "manage_repositories_menu_present": true,
+      "marketplace_distinct_page_loaded": true,
+      "marketplace_existing_items_visible": true,
+      "marketplace_warning_and_consent": "19 signed component browser scenarios cover Store, channels and warning; no installation or consent change on the physical box",
+      "physical_warning_dialog_opened": false,
+      "new_apps_or_marketplace_items_installed": 0,
+      "channel_or_preferences_changed": false,
+      "baseline_cloudflared_error_still_present": true,
+      "private_urls_or_tokens_exported": false
+    },
+    "database_schema": 53,
+    "database_migration_performed": false,
+    "private_data_exported": false,
+    "backend_receipt_owner_confirmation": "User confirmed box, tunnel and telemetry before publication authorization; new delivery observed through the existing authenticated client and MQTT PUBACK"
   },
   "builds_on_promotion": 0,
   "historical_tag_overwrites": 0,
@@ -191,13 +232,21 @@
     }
   ],
   "proof_files_sha256": {
-    "RAPPORT.md": "3e97319fb15ee1b68a5ad1b0b25151fc81cd4782c00f03a3b1b1c9ccd7204635",
+    "RAPPORT.md": "c37f640c2c72cf8dd01ff5a9bdd6a59ae02e77f7afd61a356501b5ceec6ae6df",
+    "ROLLBACK.md": "f938afc992d9277295308b4e86951d9eafc8d5e30cb4e7f222cdfdc1ed09a244",
+    "proofs/19-app-states-restored-20261116.json": "1d556a923773cf73300f65195e16fa2aae9e77bcf624e67d9c52edc2214c3271",
+    "proofs/19-core-restart-20261116.json": "2af40d7ab1acb6c6459f3c04233a677a28f47c93bc69bfc91eac671f2df419ea",
+    "proofs/19-delivery-final-20261116.json": "2daf04f94c8b5fe9338c5577e5520fa7259ddaeb33323b03910a18296b922399",
+    "proofs/19-mqtt-20261116.json": "b84bd631fe0f7d7acd3eafb7d35a881ce11b8b4c08a8a1e8a193e7e3308da089",
+    "proofs/19-portable-cloud-20261116.json": "4d5fb713ffd6bc23a61203d379e2691095d8357671a7e65a217d80221287305f",
+    "proofs/19-shadow-read-20261116.json": "399a2a801b0d315457987595f722c715a2f05e812a28b2c1348ce4899d0194d7",
     "proofs/core-aarch64-archive-binding.json": "945afaa5a72f3ff28ebc8c723daaad31ab2355788acca232c6d3078e74f3cee1",
     "proofs/core-aarch64-cloud-lib-provenance.json": "655ef2b4673a0fb6777c54042c90c224e3f21e0aff85aa6c061a30095999a098",
     "proofs/core-aarch64-native-runtime.json": "85d26dea2375f2ed3b62b2a24bf7b93d2aa6b2a8eeb6106baa383de24e424b12",
     "proofs/core-amd64-archive-binding.json": "86c3ac241069d985dd56fb28d5224aaf585737c0bd1aaf43de52b05b7500b50f",
     "proofs/core-amd64-cloud-lib-provenance.json": "655ef2b4673a0fb6777c54042c90c224e3f21e0aff85aa6c061a30095999a098",
     "proofs/core-amd64-native-runtime.json": "d06575ced3c1087ddf4c24189f5edfdeee2552b5be7b2b0f27a008716a12ed89",
+    "proofs/dev-acceptance-20261116.json": "f92018a9f521bd8abe2cbdc144a7dee83cc4453f9ce6a5fb2d841378e7d55001",
     "proofs/frontend-ORIGINAL_BUILD.json": "9e68390f9bce62aed607f4734bcf12d48a08c0d1c0806d830ce11886a8b19536",
     "proofs/frontend-QUALIFICATION.json": "ba935c012ed73bea2da66707eb02686c75885e38502fd2db5c54f7570a78a00c",
     "proofs/frontend-REUSE_PROVENANCE.json": "ba935c012ed73bea2da66707eb02686c75885e38502fd2db5c54f7570a78a00c",
@@ -224,5 +273,6 @@
     "signatures/supervisor-amd64-source-supervisor.sha256.sig": "eef856b1437b6fbd2dba466dfda52751352976d977483c5d9c373921d9245632",
     "validate.py": "908e9a9fdb439bcfd2749a8a396b57a7db6c09e72920631c2054f3adb6d71bf3",
     "verify-signatures.py": "85cfc072c42ccbaef784b24eabf6bee7d58f9cdd6f6457c8071b843731fdafb1"
-  }
+  },
+  "accepted_at": "2026-11-16T11:02:32.379709+00:00"
 }
