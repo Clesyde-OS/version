@@ -1,21 +1,23 @@
-# Livraison Clesyde/Lyvo : ouverture DEV, 16 novembre 2026
+# Clesyde/Lyvo : validation DEV et promotion BETA, 16 novembre 2026
 
-Les quatre images natives Core/Supervisor sont construites, testées, signées et publiées sous de nouveaux tags immuables. Ce changement ouvre uniquement DEV pour la validation de la box autorisée. BETA et STABLE restent identiques octet pour octet. Aucune image n'est reconstruite lors de la publication.
+Résultat : PASS pour la qualification de la seule BOX DEV ARM64. Les mêmes images signées sont proposées pour DEV et BETA, sans reconstruction ni écrasement de tag historique. STABLE reste identique.
 
-| Composant | Base fonctionnelle | Paquet immuable |
+| Composant | Version fonctionnelle | Paquet immuable |
 | --- | --- | --- |
 | Core | 2026.11.1 | 2026.11.1.4 |
 | Frontend | 20261028.5 | wheel 3clesyde3 |
 | Supervisor | 2026.11.0 | 2026.11.0.6 |
 
-Core : 11 101 tests passés, 1 ignoré, 176 snapshots, 42 tests du SDK, 6 scénarios de démarrage/nettoyage, quatre lots complets Pylint et tous les contrôles de qualité passent. Le Frontend partagé a passé 19 scénarios Store/Marketplace et conserve les avertissements, le consentement et les notices. Les images ARM64 et AMD64 ont passé les démarrages/redémarrages HTTP natifs ; chaque archive, blob OCI, digest et signature a été vérifié. Le même wheel Frontend, SHA256 `578b94541a29aa49eb3c6c7b4226279962fb3d034309113aa26d007f6edc810a`, est utilisé sur les deux architectures.
+Les images natives ARM64/AMD64 ont passé leurs contrôles, démarrages et redémarrages HTTP. Core : 11 101 tests passés, 1 ignoré, 176 snapshots, 42 tests SDK, 6 scénarios de cycle de vie et tous les contrôles de qualité/Pylint. Frontend : compilation unique, mêmes octets dans les deux images, 19 scénarios Store/Marketplace. Sept signatures de construction/source et tous les blobs/digests OCI ont été vérifiés. Les PR amont restent distinctes de cette qualification ; leurs attentes OEM, chemins volontairement désactivés et services externes ne constituent pas une CI amont globalement verte.
 
-Les correctifs couvrent les erreurs de provisionnement sans secrets, le cycle de vie Cloud, le rechargement du tunnel, le callback de certificat attendu, l'URL externe persistée, les guides techniques officiels, les icônes, les traductions Marketplace et la visibilité du Store selon le vrai canal. Le SDK reste 0.1.21.dev2, SniTun 0.47.0, le port 8123 et l'API AWS Lyvo de production sont conservés. Marketplace HA et Store Clesyde restent distincts.
+Sur la box DEV : les deux images, commits et digests correspondent aux artefacts signés ; 15513 fichiers du Frontend, SDK et composant Lyvo ont été comparés. Cloud chargé, six fichiers d'identité/certificats inchangés, URL externe persistée et active conforme à l'adresse attribuée, contenu Frontend exact reçu en HTTPS avec validation TLS. Redémarrage Core et redémarrage réel de la box observés, mêmes artefacts après redémarrage, SQLite intègre au schéma 53 sans migration effectuée.
 
-La sauvegarde complète du 16 novembre `36bd3682` a été restaurée en isolation : 3012 fichiers identiques, SQLite intègre, schéma 53, identité et données Cloud présentes. Les originaux et le runtime précédent sont conservés en privé hors box. Aucun certificat, clé, token ou configuration privée n'est dans ce dépôt.
+MQTT local : connexion, SUBACK, PUBACK et écho QoS1 non conservé sur un sujet de diagnostic unique passent. Cloud : deux lectures du shadow config traitées par le client existant, aucun desired modifié ; six séries collectées par minute et 1 lot(s) confirmé(s) après publication MQTT. Aucun échec de lecture/publication ; file SQLite vide après livraison ; niveaux de journalisation rétablis. Douze cas isolés sur le matériel ARM64 passent (lecteurs, horloge, persistance/reprise, QoS1, profils, callback de certificat attendu), avec transport simulé et sans rotation volontaire de certificat.
 
-La qualification réelle des nouveaux artefacts sur la seule BOX DEV est encore en attente. Le Supervisor installé ignore une version explicite hors mode de développement et utilise la version du catalogue : l'ouverture DEV précède donc normalement l'installation. Aucun mode de sécurité ni contrôle de version n'est contourné. BETA ne sera ouvert qu'après validation de la box. Aucun accès ni déploiement sur une box cliente ou showroom.
+Store : les seize extensions installées restent rattachées, versions et préférences de mise à jour inchangées. UI réelle vérifiée ; Marketplace distinct du Store Clesyde, avertissements/consentement conservés et traductions corrigées. Les guides techniques officiels sont rétablis. Le SDK 0.1.21.dev2, SniTun 0.47.0, port 8123 et endpoint AWS Lyvo de production restent conservés.
 
-La CI native de livraison est verte ; les PR amont conservent des attentes OEM/chemins désactivés et des services externes hors de cette qualification. Ce rapport ne déclare pas la CI amont globalement verte. ARM64 doit encore être validé sur la box ; AMD64 a une validation native CI, sans machine physique disponible. Les tests radio réels restent dépendants du matériel ; les suites KNX/Z-Wave/MQTT et les imports natifs passent.
+Sauvegarde complète fraîche 36bd3682 : 3 012 fichiers restaurés à l'identique hors box, SQLite intègre et données Cloud présentes. Runtime précédent et Frontend2 conservés, retour arrière préparé ; aucun rollback réel n'a été appliqué pour ce test. Les clés, tokens, certificats de box, noms de tunnel et sauvegardes restent privés dans Work.
 
-Les signatures publiques de construction, les digests et les preuves sont dans `manifest.json`, `signatures/` et `proofs/`. Les sauvegardes privées restent dans Work. Les tags historiques 2026.10.4, 2026.11.1 et 2026.11.0 ont été conservés.
+Limites : AMD64 est validé nativement en CI, sans box AMD64 physique disponible. Les essais KNX/Z-Wave des suites et imports natifs ne valent pas une validation complète sur chaque matériel radio. L'erreur cloudflared et les préférences d'extensions relevées avant essai restent des éléments de l'état initial. Aucune box cliente/showroom n'a été connectée ou déployée. La promotion du catalogue ne force pas le retour arrière d'une box déjà mise à jour.
+
+Les références complètes et preuves sont dans manifest.json, signatures/ et proofs/. La phase DEV a été activée par PR9 ; cette phase ne modifie que les trois valeurs BETA après validation, DEV et STABLE restant inchangés.

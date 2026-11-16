@@ -1,0 +1,11 @@
+{
+  "channel": "dev",
+  "config_shadow_read_services_completed": 2,
+  "mqtt_ping_service_completed": true,
+  "backend_ping_ack_claimed": false,
+  "desired_shadow_written": false,
+  "unchanged_desired_handlers": 2,
+  "profile_rejected_count": 0,
+  "unawaited_coroutine_warning_count": 0,
+  "secrets_or_profiles_saved": false
+}

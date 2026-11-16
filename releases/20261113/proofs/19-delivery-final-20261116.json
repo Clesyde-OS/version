@@ -1,0 +1,50 @@
+{
+  "channel": "dev",
+  "mode": "restore",
+  "raw_profiles_or_secrets_saved": false,
+  "started_at": "2026-11-16T10:54:31.303752+00:00",
+  "observed_at": "2026-11-16T10:59:32.010933+00:00",
+  "baseline_spool": {
+    "next_sequence": 825,
+    "pending_batches": 0,
+    "sqlite_quick_check": "ok"
+  },
+  "current_spool": {
+    "next_sequence": 826,
+    "pending_batches": 0,
+    "sqlite_quick_check": "ok"
+  },
+  "queued_sequences": [
+    825
+  ],
+  "delivered_sequences": [
+    825
+  ],
+  "confirmed_batch_count": 1,
+  "minute_collections": [
+    {
+      "collected": 6,
+      "configured": 6
+    },
+    {
+      "collected": 6,
+      "configured": 6
+    },
+    {
+      "collected": 6,
+      "configured": 6
+    },
+    {
+      "collected": 6,
+      "configured": 6
+    },
+    {
+      "collected": 6,
+      "configured": 6
+    }
+  ],
+  "publish_failure_count": 0,
+  "reader_failure_count": 0,
+  "logger_storage_and_yaml_unchanged": true,
+  "configured_log_levels_restored": true
+}

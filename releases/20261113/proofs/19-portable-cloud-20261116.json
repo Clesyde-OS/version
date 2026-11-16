@@ -1,0 +1,28 @@
+{
+  "portable_telemetry_tests": "PASS",
+  "cases_passed": [
+    "physical_approved_metric_readers",
+    "unsynchronized_clock_suppresses_collection",
+    "real_metric_collection_and_payload_schema",
+    "invalid_dimensions_preserve_active_profile",
+    "sqlite_spool_survives_worker_restart",
+    "mqtt_failure_keeps_durable_batch",
+    "qos1_retry_clears_only_after_confirmed_delivery",
+    "partial_shadow_delta_does_not_replace_profile",
+    "absent_desired_profile_disables_collection",
+    "sqlite_integrity_after_stop",
+    "awaited_certificate_callback_get_accepted",
+    "awaited_certificate_callback_update_delta"
+  ],
+  "case_count": 12,
+  "physical_metrics_read": [
+    "network.tx.bytes",
+    "network.rx.bytes",
+    "system.load.1m",
+    "filesystem.available"
+  ],
+  "backend": "simulated only; no AWS or MQTT network calls",
+  "live_cloud_state_or_profile_modified": false,
+  "temporary_spool_removed": true,
+  "python": "3.14.10"
+}

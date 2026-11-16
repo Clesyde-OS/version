@@ -1,0 +1,13 @@
+{
+  "mqtt_local_roundtrip": "PASS",
+  "connect": "PASS",
+  "suback": "PASS",
+  "puback": "PASS",
+  "matching_echo": "PASS",
+  "qos": 1,
+  "retain": false,
+  "clean_session": true,
+  "topic_prefix": "clesyde_dev_validation",
+  "actuator_or_discovery_topic_used": false,
+  "cloud_aws_mqtt_test": false
+}

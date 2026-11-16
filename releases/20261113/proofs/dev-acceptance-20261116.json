@@ -1,0 +1,95 @@
+{
+  "time_utc": "2026-11-16T11:02:11.014926+00:00",
+  "exact_images": [
+    {
+      "component": "core",
+      "version": "2026.11.1.4",
+      "config_digest": "sha256:27a377dfa993c73a816d939a3727b801469634421daa8d3ed3a52dba01d10255",
+      "repo_digests": [
+        "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant@sha256:4b0a42e76329ca592dc711c697f9155a9714b98f9ed421b32d6877b72e4bebd1"
+      ],
+      "source_commit": "526e26f5a757b6e0c990835579766dfadf97213d",
+      "frontend_wheel_sha256": "578b94541a29aa49eb3c6c7b4226279962fb3d034309113aa26d007f6edc810a",
+      "exact_candidate_match": true,
+      "original_baseline_match": false,
+      "running": true,
+      "started_at": "2026-11-16T10:50:50.031052734Z"
+    },
+    {
+      "component": "supervisor",
+      "version": "2026.11.0.6",
+      "config_digest": "sha256:8d89f3dc52065bdff7b11e0d2a64056fec34bd0756431920f855ceed266644c3",
+      "repo_digests": [
+        "ghcr.io/clesyde-os/aarch64-hassio-supervisor@sha256:08bd2512193e1e43c942e0869f1edce0a90752a63f0b4bf712ab6fd4e1b94c3c"
+      ],
+      "source_commit": "c0a411d2cc218169b98495d8b633f8497e54b70a",
+      "frontend_wheel_sha256": null,
+      "exact_candidate_match": true,
+      "original_baseline_match": false,
+      "running": true,
+      "started_at": "2026-11-16T10:49:36.373470354Z"
+    }
+  ],
+  "runtime_files_verified": 15513,
+  "frontend_files_verified": 15476,
+  "sdk_files_verified": 18,
+  "lyvo_files_verified": 19,
+  "frontend_build": "3clesyde3",
+  "integration_states": {
+    "lyvo": [
+      "loaded"
+    ],
+    "mqtt": [
+      "loaded"
+    ],
+    "knx": [
+      "not_loaded"
+    ],
+    "zwave_js": []
+  },
+  "installed_app_count": 16,
+  "dev_acceptance": {
+    "result": "PASS",
+    "exact_images": "PASS",
+    "cloud_entry_loaded": true,
+    "external_url_and_tunnel": "PASS",
+    "credentials_unchanged": 6,
+    "mqtt_roundtrip": "PASS",
+    "physical_isolated_cloud_cases": 12,
+    "shadow_get_handlers": 2,
+    "telemetry_confirmed_batches": 1,
+    "telemetry_series_per_minute": 6,
+    "logger_restored": true,
+    "core_restart": true,
+    "host_reboot_observed": true,
+    "store_installed_apps_attached": true,
+    "installed_app_versions_and_update_preferences_unchanged": true,
+    "ui": {
+      "date": "2026-11-16",
+      "result": "PASS",
+      "target": "authorized DEV box only",
+      "authenticated_settings_loaded": true,
+      "clesyde_branding_visible": true,
+      "installed_apps_page_loaded": true,
+      "installed_app_count": 16,
+      "store_loaded": true,
+      "clesyde_apps_group_visible": true,
+      "nonempty_local_apps_group_visible": true,
+      "upstream_groups_visible_on_dev": true,
+      "manual_external_repository_groups_visible": true,
+      "manage_repositories_menu_present": true,
+      "marketplace_distinct_page_loaded": true,
+      "marketplace_existing_items_visible": true,
+      "marketplace_warning_and_consent": "19 signed component browser scenarios cover Store, channels and warning; no installation or consent change on the physical box",
+      "physical_warning_dialog_opened": false,
+      "new_apps_or_marketplace_items_installed": 0,
+      "channel_or_preferences_changed": false,
+      "baseline_cloudflared_error_still_present": true,
+      "private_urls_or_tokens_exported": false
+    },
+    "database_schema": 53,
+    "database_migration_performed": false,
+    "private_data_exported": false,
+    "backend_receipt_owner_confirmation": "User confirmed box, tunnel and telemetry before publication authorization; new delivery observed through the existing authenticated client and MQTT PUBACK"
+  }
+}
