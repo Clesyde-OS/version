@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "time_utc": "2026-11-17T13:25:44.549044+00:00",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "native_run": 44059783487,
+  "signature_identity": "https://github.com/Clesyde-OS/core/.github/workflows/clesyde-upstream-dev.yaml@refs/heads/clesyde/restore-upstream-stores-20261117",
+  "original_image_signatures_verified": 2,
+  "original_shared_frontend_signature_verified": true,
+  "registry_readback": [
+    {
+      "reference": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant:2026.11.1.4",
+      "architecture": "aarch64",
+      "digest": "sha256:4b0a42e76329ca592dc711c697f9155a9714b98f9ed421b32d6877b72e4bebd1"
+    },
+    {
+      "reference": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant:2026.11.1.5",
+      "architecture": "aarch64",
+      "digest": "sha256:eff076101ad9fc52484ad92d709608548c652fdcad660aa42d29cf98dc57278d"
+    },
+    {
+      "reference": "ghcr.io/clesyde-os/generic-x86-64-homeassistant:2026.11.1.4",
+      "architecture": "amd64",
+      "digest": "sha256:37b7f6415964dd0e5a013fdd013837c0b1f303c3cb8f23d00a3dc0a28dfe3f1f"
+    },
+    {
+      "reference": "ghcr.io/clesyde-os/generic-x86-64-homeassistant:2026.11.1.5",
+      "architecture": "amd64",
+      "digest": "sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc"
+    }
+  ],
+  "same_images_as_accepted_dev": true,
+  "rollback_preserved": true,
+  "registry_mutation": false,
+  "rebuilds": 0
+}
