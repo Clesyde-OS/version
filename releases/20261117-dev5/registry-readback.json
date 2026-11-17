@@ -1,0 +1,26 @@
+[
+  {
+    "architecture": "aarch64",
+    "reference": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant:2026.11.1.4",
+    "digest": "sha256:4b0a42e76329ca592dc711c697f9155a9714b98f9ed421b32d6877b72e4bebd1",
+    "expected": "sha256:4b0a42e76329ca592dc711c697f9155a9714b98f9ed421b32d6877b72e4bebd1"
+  },
+  {
+    "architecture": "aarch64",
+    "reference": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant:2026.11.1.5",
+    "digest": "sha256:eff076101ad9fc52484ad92d709608548c652fdcad660aa42d29cf98dc57278d",
+    "expected": "sha256:eff076101ad9fc52484ad92d709608548c652fdcad660aa42d29cf98dc57278d"
+  },
+  {
+    "architecture": "amd64",
+    "reference": "ghcr.io/clesyde-os/generic-x86-64-homeassistant:2026.11.1.4",
+    "digest": "sha256:37b7f6415964dd0e5a013fdd013837c0b1f303c3cb8f23d00a3dc0a28dfe3f1f",
+    "expected": "sha256:37b7f6415964dd0e5a013fdd013837c0b1f303c3cb8f23d00a3dc0a28dfe3f1f"
+  },
+  {
+    "architecture": "amd64",
+    "reference": "ghcr.io/clesyde-os/generic-x86-64-homeassistant:2026.11.1.5",
+    "digest": "sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc",
+    "expected": "sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc"
+  }
+]

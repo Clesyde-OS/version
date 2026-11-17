@@ -8,6 +8,8 @@ on:
       - dev.json
       - beta.json
       - releases/20261113/**
+      - releases/20261117/**
+      - releases/20261117-dev5/**
       - .github/workflows/validate-release-20261113.yaml
 permissions:
   contents: read
@@ -25,7 +27,9 @@ jobs:
           cosign-release: v2.5.3
       - name: Validate exact catalogs and release evidence
         run: |
-          if test -f releases/20261117/manifest.json; then
+          if test -f releases/20261117-dev5/manifest.json; then
+            python3 releases/20261117-dev5/validate-dev.py
+          elif test -f releases/20261117/manifest.json; then
             python3 releases/20261117/validate-dev.py
           else
             python3 releases/20261113/validate.py

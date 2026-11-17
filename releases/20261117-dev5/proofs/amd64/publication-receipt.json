@@ -1,0 +1,16 @@
+{
+  "result": "published-from-digest-verified-staging",
+  "candidate": "ghcr.io/clesyde-os/generic-x86-64-homeassistant:2026.11.1.5",
+  "digest": "sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "native_ci_run": 44059783487,
+  "archive_sha256": "55afa5c5a2099048bfd1adf5cb1eeb27cf56abf13aaea661acf4c97ad755953f",
+  "frontend_patch_sha256": "08b0ebb1b4c4227324cff0ae1217d29d8c0ad21e13a8d0ba15d68cc68640098a",
+  "signature_verified_before_publication": true,
+  "registry_manifest_readback": true,
+  "previous_tag_unchanged": true,
+  "rebuild": false,
+  "catalog_changed": false,
+  "beta_or_stable_changed": false,
+  "dev_box_tested": false
+}

@@ -1,0 +1,11 @@
+{
+  "architecture": "amd64",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "native_run": 44059783487,
+  "image_digest": "sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc",
+  "cosign_signature": "PASS",
+  "archive_checksum": "PASS",
+  "all_oci_blobs": 30,
+  "frontend_patch_sha256": "08b0ebb1b4c4227324cff0ae1217d29d8c0ad21e13a8d0ba15d68cc68640098a",
+  "frontend_wheel_sha256": "5e5332b887efb4599ee39f87391eb73fd74c905ddb0ead2427d2ac0e88f28e78"
+}

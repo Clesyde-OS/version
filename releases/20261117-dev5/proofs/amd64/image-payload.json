@@ -1,0 +1,1 @@
+{"critical":{"identity":{"docker-reference":"ghcr.io/clesyde-os/generic-x86-64-homeassistant"},"image":{"docker-manifest-digest":"sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc"},"type":"cosign container image signature"},"optional":null}
