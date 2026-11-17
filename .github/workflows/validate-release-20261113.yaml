@@ -24,6 +24,11 @@ jobs:
         with:
           cosign-release: v2.5.3
       - name: Validate exact catalogs and release evidence
-        run: python3 releases/20261113/validate.py
+        run: |
+          if test -f releases/20261117/manifest.json; then
+            python3 releases/20261117/validate-dev.py
+          else
+            python3 releases/20261113/validate.py
+          fi
       - name: Verify all recorded artifact and installed-source signatures
         run: python3 releases/20261113/verify-signatures.py

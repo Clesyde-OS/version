@@ -1,0 +1,16 @@
+{
+  "result": "published-from-digest-verified-staging",
+  "candidate": "ghcr.io/clesyde-os/raspberrypi4-64-homeassistant:2026.11.1.5",
+  "digest": "sha256:eff076101ad9fc52484ad92d709608548c652fdcad660aa42d29cf98dc57278d",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "native_ci_run": 44059783487,
+  "archive_sha256": "ee0a32173ba5af1dbc74259cf932852d3acff12b5060b23ae3282a325ccfdda4",
+  "frontend_patch_sha256": "08b0ebb1b4c4227324cff0ae1217d29d8c0ad21e13a8d0ba15d68cc68640098a",
+  "signature_verified_before_publication": true,
+  "registry_manifest_readback": true,
+  "previous_tag_unchanged": true,
+  "rebuild": false,
+  "catalog_changed": false,
+  "beta_or_stable_changed": false,
+  "dev_box_tested": false
+}
