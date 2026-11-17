@@ -1,0 +1,8 @@
+{
+  "reference": "ghcr.io/clesyde-os/generic-x86-64-homeassistant@sha256:ad2521a8fc51ec997a7a81c3a129668d22957a9eb8c2524419fcba8fce9f9efc",
+  "tag": "2026.11.1.5",
+  "config_digest": "sha256:5393d08c38c3ccbad074a35637634dd32e2a7ac2796c05a6ce4920a35059717d",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "architecture": "amd64",
+  "exact_native_tested_archive": true
+}

@@ -1,0 +1,19 @@
+{
+  "versions": {
+    "homeassistant": "2026.11.1",
+    "home-assistant-frontend": "20261028.5",
+    "clesyde-cloud-lib": "0.1.21.dev2",
+    "snitun": "0.47.0",
+    "xknx": "4.1.1",
+    "zwave-js-server-python": "0.74.0"
+  },
+  "python": "3.14.10",
+  "architecture": "aarch64",
+  "http_default": 8123,
+  "backend_url": "https://d9wlu73rd7.execute-api.eu-west-1.amazonaws.com/api",
+  "protocol_imports": "PASS",
+  "functional_entity_icons": "PASS",
+  "ha_logo_filter": "PASS",
+  "network": "disabled",
+  "real_provisioning_or_radio": false
+}

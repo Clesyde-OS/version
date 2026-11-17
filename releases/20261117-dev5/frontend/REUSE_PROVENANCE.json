@@ -1,0 +1,29 @@
+{
+  "wheel": "home_assistant_frontend-20261028.5-4clesyde4-py3-none-any.whl",
+  "wheel_sha256": "5e5332b887efb4599ee39f87391eb73fd74c905ddb0ead2427d2ac0e88f28e78",
+  "original_build": {
+    "run_id": 44055644347,
+    "source_commit": "b01925183fc0116cd472b3b503e6bb61c4326d87",
+    "wheel_sha256": "5e5332b887efb4599ee39f87391eb73fd74c905ddb0ead2427d2ac0e88f28e78"
+  },
+  "compiler_inputs": {
+    "upstream_commit": "e32bc0696ebefde323f5b791269ad0c57f3f99d9",
+    "patch_sha256": "08b0ebb1b4c4227324cff0ae1217d29d8c0ad21e13a8d0ba15d68cc68640098a",
+    "files": {
+      "README.md": "8ef6af4330eb7a9037d1b44654366ae40d3812d014bde10216ba8b43e5f6b7c3",
+      "SOURCES.sha256": "6f1304fe64bb281babdb5738f560b7337bc9ce1458f615d3565684dd47de8ff2",
+      "candidate.json": "29a437e395debf151ddd829802efef74c10f639469bb0264950eae2d6bf04ada",
+      "clesyde-frontend.patch": "08b0ebb1b4c4227324cff0ae1217d29d8c0ad21e13a8d0ba15d68cc68640098a",
+      "rebuild.sh": "bc61734d85d0ecf3d33a89f55f34e3f6ea707991b0cc0f8ee28532ed19ee4b2b",
+      "upstream.lock.json": "4124628f8b94b6dc84fb4ba9f127116a20ca9b4f784e70d4233ad7a6e3ed1ca4"
+    }
+  },
+  "validation_run": 44059783487,
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "compiled_once": true,
+  "source_checks": "PASS",
+  "store_grid_browser_cases": 9,
+  "store_channel_browser_cases": 6,
+  "marketplace_warning_browser_cases": 4,
+  "browser": "PASS; simulated backend, actual components"
+}

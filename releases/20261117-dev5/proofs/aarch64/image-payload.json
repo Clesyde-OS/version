@@ -1,0 +1,1 @@
+{"critical":{"identity":{"docker-reference":"ghcr.io/clesyde-os/raspberrypi4-64-homeassistant"},"image":{"docker-manifest-digest":"sha256:eff076101ad9fc52484ad92d709608548c652fdcad660aa42d29cf98dc57278d"},"type":"cosign container image signature"},"optional":null}
