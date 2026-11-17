@@ -1,0 +1,14 @@
+{
+  "stage": "beta-promotion-exact-accepted-dev",
+  "base_commit": "a33c4231cc45e7009349d21301c935d35ee9c3d2",
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "core_package": "2026.11.1.5",
+  "frontend_build": "4clesyde4",
+  "native_run": 44059783487,
+  "dev_catalog_pr": 12,
+  "registry_mutation": false,
+  "rebuilds": 0,
+  "stable_changed": false,
+  "showroom_update_at_catalog_preparation": "PENDING_VERIFIED_BACKUP",
+  "general_upstream_ci": "Known red baseline; dedicated native candidate and catalog validation passed. No source or binary change for promotion."
+}

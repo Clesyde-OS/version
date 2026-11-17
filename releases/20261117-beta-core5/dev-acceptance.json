@@ -1,0 +1,19 @@
+{
+  "user_accepted_dev": true,
+  "explicit_beta_promotion_requested": true,
+  "request_date": "2026-11-17",
+  "dev_installed_core": "2026.11.1.5",
+  "signed_frontend_files_match_served": true,
+  "store_order": [
+    "Clesyde Apps",
+    "Local apps",
+    "Official apps",
+    "ESPHome",
+    "Home Assistant Community Apps",
+    "Home Assistant MCP Server",
+    "Music Assistant"
+  ],
+  "applications_unchanged": 16,
+  "source_commit": "391e027fb62f296d83dd0c55c5c6b08e1fb9f1e4",
+  "dev_catalog_pr": 12
+}
