@@ -1,0 +1,21 @@
+name: Phase 2 preparation without channel activation
+on:
+  pull_request:
+    paths: ["preparation/phase2-20261027/**", ".github/workflows/phase2-preparation.yaml"]
+permissions:
+  contents: read
+jobs:
+  proposal:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate historical evidence and unchanged current channels
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          test "$(git rev-parse HEAD^2)" = "$PR_HEAD_SHA"
+          BASE_SHA="$(git rev-parse HEAD^1)"
+          python3 preparation/phase2-20261027/validate.py --base-ref "$BASE_SHA"
