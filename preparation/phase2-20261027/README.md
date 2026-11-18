@@ -40,7 +40,9 @@ The read-only validation command requires the exact current PR base commit:
 python3 preparation/phase2-20261027/validate.py --base-ref <40-character-base-SHA>
 ```
 
-CI obtains that SHA from the pull-request event and fetches full history.
+CI fetches full history and uses the first parent of the checked-out test
+merge as the actual base, after verifying that its second parent is the
+expected PR head. The event's cached base SHA can be older than that merge.
 It verifies that the PR and worktree change none of dev.json, beta.json or
 stable.json. It reads current plugin selections from that base with git show;
 new accepted Core/Supervisor versions are allowed. Image templates, native
