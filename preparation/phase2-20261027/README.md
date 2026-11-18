@@ -1,8 +1,9 @@
 # Phase 2 preparation, 27 October 2026
 
-This directory is preparation only. No served channel manifest changes.
-The user must explicitly accept the ongoing Core/Supervisor 2026.10.4 DEV
-field validation before any of these components is announced on DEV.
+This directory preserves the historical preparation from 27 October 2026.
+No served channel manifest changes are included. Core/Supervisor releases
+accepted later are not required to match this historical baseline. Plugin
+activation still requires a separate explicit decision and current field review.
 No BETA/STABLE, installed app, field device, AWS or OS image changes are included.
 
 | Component | Existing DEV | Official STABLE candidate | Distribution |
@@ -27,8 +28,23 @@ Recheck official tags against the frozen digests immediately before future
 activation and verify the downloaded platform image on each target.
 
 Candidate JSON is not a channel manifest and must never be served as one.
-`python3 preparation/phase2-20261027/validate.py` is read-only. CI checks
-templates, architectures, provenance, and unchanged DEV/BETA/STABLE snapshots.
+`candidate.json` and `snapshots/*.json` are immutable historical evidence.
+Their versions and SHA256 values are checked against the original channel
+bytes, not against today's catalog. The historical blocked status in
+`candidate.json` remains a record, not a claim about current Core/Supervisor
+acceptance or permission to activate plugins.
+
+The read-only validation command requires the exact current PR base commit:
+
+```sh
+python3 preparation/phase2-20261027/validate.py --base-ref <40-character-base-SHA>
+```
+
+CI obtains that SHA from the pull-request event and fetches full history.
+It verifies that the PR and worktree change none of dev.json, beta.json or
+stable.json. It reads current plugin selections from that base with git show;
+new accepted Core/Supervisor versions are allowed. Image templates, native
+platforms, original distribution policy and frozen digests remain checked.
 
 Future activation, only after explicit user acceptance:
 
