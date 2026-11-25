@@ -1,0 +1,29 @@
+name: Check release image availability
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: Catalogue to verify
+        type: choice
+        options: [dev, beta, stable]
+        default: dev
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login using device-equivalent read-only credentials
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: lyvobox
+          password: ${{ secrets.LYVOBOX_READ_PAT }}
+      - name: Verify catalogued images and recovery tags
+        env:
+          CHANNEL: ${{ inputs.channel }}
+        run: python3 script/check-release-images.py "$CHANNEL"
