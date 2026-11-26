@@ -1,6 +1,7 @@
 name: Check release image availability
 
 on:
+  pull_request:
   workflow_dispatch:
     inputs:
       channel:
@@ -14,16 +15,75 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    name: Lyvo release image preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Select catalogues
+        id: channels
+        env:
+          EVENT: ${{ github.event_name }}
+          REQUESTED: ${{ inputs.channel }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = workflow_dispatch ]; then
+            channels="$REQUESTED"
+          else
+            files="$(git diff --name-only "$BASE" HEAD)"
+            channels=""
+            if printf '%s\n' "$files" | grep -Eq '^(script/check-release-images.py|.github/workflows/check-release-images.yml)$'; then
+              channels="dev beta stable"
+            else
+              for channel in dev beta stable; do
+                if printf '%s\n' "$files" | grep -Fxq "$channel.json"; then
+                  channels="$channels $channel"
+                fi
+              done
+            fi
+          fi
+          echo "selected=$channels" >> "$GITHUB_OUTPUT"
+      - name: Require a trusted same-repository change
+        if: steps.channels.outputs.selected != ''
+        env:
+          EVENT: ${{ github.event_name }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        run: |
+          if [ "$EVENT" = pull_request ] && [ "$HEAD_REPO" != "$GITHUB_REPOSITORY" ]; then
+            echo "::error::Release preflight must run on an approved internal branch."
+            exit 1
+          fi
+      - name: Require device-equivalent read-only credentials
+        if: steps.channels.outputs.selected != ''
+        env:
+          DEVICE_PAT: ${{ secrets.LYVOBOX_READ_PAT }}
+        run: |
+          if [ -z "$DEVICE_PAT" ]; then
+            echo "::error::Configure LYVOBOX_READ_PAT with device-equivalent package read access."
+            exit 1
+          fi
       - name: Login using device-equivalent read-only credentials
+        if: steps.channels.outputs.selected != ''
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: lyvobox
           password: ${{ secrets.LYVOBOX_READ_PAT }}
-      - name: Verify catalogued images and recovery tags
+      - name: Install image inspection tool
+        if: steps.channels.outputs.selected != ''
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends skopeo
+      - name: Verify catalogued images, architectures and recovery tags
+        if: steps.channels.outputs.selected != ''
         env:
-          CHANNEL: ${{ inputs.channel }}
-        run: python3 script/check-release-images.py "$CHANNEL"
+          CHANNELS: ${{ steps.channels.outputs.selected }}
+        run: |
+          set -euo pipefail
+          failed=0
+          for channel in $CHANNELS; do
+            python3 script/check-release-images.py "$channel" || failed=1
+          done
+          exit "$failed"
