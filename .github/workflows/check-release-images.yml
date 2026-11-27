@@ -83,6 +83,11 @@ jobs:
         run: |
           set -euo pipefail
           failed=0
+          # One-time diagnostic for the exact signed recovery candidates.
+          if [ "$GITHUB_HEAD_REF" = "clesyde/safe-update-20261125" ]; then
+            python3 script/check-release-images.py --candidate raspberrypi4-64 sha256:b51eb2548162bdc22dea6043d9c6a67e4762592039ac341d500adcd347c0d600 || failed=1
+            python3 script/check-release-images.py --candidate generic-x86-64 sha256:748714466ccd1e23f549eadfddfdac5597bba2cf6967f3982223cffd13002501 || failed=1
+          fi
           for channel in $CHANNELS; do
             python3 script/check-release-images.py "$channel" || failed=1
           done
