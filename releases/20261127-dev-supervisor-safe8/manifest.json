@@ -1,0 +1,18 @@
+{
+  "stage": "dev-supervisor-only",
+  "base_commit": "1f0768ea032f1e4f61b9f1c93b55851c443e08be",
+  "previous_release_commit": "c226ffbc4b5652ac81c8278dc84b6d5bb3f835f4",
+  "supervisor": "2026.11.0.8",
+  "previous_supervisor": "2026.11.0.6",
+  "source_commit": "d28a86d1455b8b97359d434085d4618b40d3f79b",
+  "native_build_run": 45975834977,
+  "publication_run": 45980061215,
+  "device_readback_run": 45980458812,
+  "images": {
+    "aarch64": "sha256:b53393d310fb437ca669e6d2c8b265d64d3128e22e1fbe3285aac4a977c59cdd",
+    "amd64": "sha256:2b7cf1501853c59d403cf9bed87e5dba51595cd8b29ddc85d657deeee56f4e9e"
+  },
+  "physical_dev_acceptance": "pending",
+  "beta_promotion_authorized": false,
+  "stable_changed": false
+}

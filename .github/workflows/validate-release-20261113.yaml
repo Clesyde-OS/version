@@ -12,13 +12,14 @@ on:
       - releases/20261117/**
       - releases/20261117-dev5/**
       - releases/20261117-beta-core5/**
+      - releases/20261127-dev-supervisor-safe8/**
       - .github/workflows/validate-release-20261113.yaml
 permissions:
   contents: read
 jobs:
   release:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -29,7 +30,15 @@ jobs:
           cosign-release: v2.5.3
       - name: Validate exact catalogs and release evidence
         run: |
-          if test -f releases/20261117-beta-core5/manifest.json; then
+          if test -f releases/20261127-dev-supervisor-safe8/manifest.json; then
+            # Replay the original BETA validator at its exact historical commit.
+            # Its assertions intentionally freeze that release's catalogues.
+            historical="$RUNNER_TEMP/historical-beta-core5"
+            git worktree add --detach "$historical" c226ffbc4b5652ac81c8278dc84b6d5bb3f835f4
+            (cd "$historical" && python3 releases/20261117-beta-core5/validate-beta.py)
+            git worktree remove "$historical"
+            python3 releases/20261127-dev-supervisor-safe8/validate.py
+          elif test -f releases/20261117-beta-core5/manifest.json; then
             python3 releases/20261117-beta-core5/validate-beta.py
           elif test -f releases/20261117-dev5/manifest.json; then
             python3 releases/20261117-dev5/validate-dev.py
@@ -40,3 +49,26 @@ jobs:
           fi
       - name: Verify all recorded artifact and installed-source signatures
         run: python3 releases/20261113/verify-signatures.py
+      - name: Login with device-equivalent read-only credentials
+        if: hashFiles('releases/20261127-dev-supervisor-safe8/manifest.json') != ''
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: lyvobox
+          password: ${{ secrets.LYVOBOX_READ_PAT }}
+      - name: Verify exact published Supervisor tags and signatures
+        if: hashFiles('releases/20261127-dev-supervisor-safe8/manifest.json') != ''
+        run: |
+          set -euo pipefail
+          for arch in aarch64 amd64; do
+            case "$arch" in aarch64) platform=arm64 ;; amd64) platform=amd64 ;; esac
+            digest="$(jq -er --arg arch "$arch" '.images[$arch]' releases/20261127-dev-supervisor-safe8/manifest.json)"
+            image="ghcr.io/clesyde-os/$arch-hassio-supervisor"
+            ref="$image:2026.11.0.8"
+            docker pull --platform "linux/$platform" "$ref"
+            docker image inspect --format '{{json .RepoDigests}}' "$ref" | jq -e --arg exact "$image@$digest" 'index($exact) != null'
+            test "$(docker image inspect --format '{{.Architecture}}' "$ref")" = "$platform"
+            test "$(docker image inspect --format '{{index .Config.Labels "io.hass.version"}}' "$ref")" = "2026.11.0.8"
+            test "$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.title"}}' "$ref")" = "Clesyde Supervisor"
+            cosign verify --certificate-identity "https://github.com/Clesyde-OS/supervisor/.github/workflows/clesyde-publish-safe8.yaml@refs/heads/clesyde/publish-safe8-20261127" --certificate-oidc-issuer https://token.actions.githubusercontent.com "$image@$digest" >/dev/null
+          done
