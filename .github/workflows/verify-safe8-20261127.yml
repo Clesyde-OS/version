@@ -1,0 +1,48 @@
+name: Verify published Supervisor safe8 using Lyvo read permissions
+on:
+  push:
+    branches: ["clesyde/verify-safe8-20261127"]
+    paths: [".github/workflows/verify-safe8-20261127.yml"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.repository == 'Clesyde-OS/version'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: aarch64
+            platform: arm64
+            digest: sha256:b53393d310fb437ca669e6d2c8b265d64d3128e22e1fbe3285aac4a977c59cdd
+          - arch: amd64
+            platform: amd64
+            digest: sha256:2b7cf1501853c59d403cf9bed87e5dba51595cd8b29ddc85d657deeee56f4e9e
+    steps:
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: lyvobox
+          password: ${{ secrets.LYVOBOX_READ_PAT }}
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6
+        with:
+          cosign-release: v2.5.3
+      - name: Pull exact published tag and verify installed metadata and signature
+        env:
+          ARCH: ${{ matrix.arch }}
+          PLATFORM: ${{ matrix.platform }}
+          DIGEST: ${{ matrix.digest }}
+        run: |
+          set -euo pipefail
+          image="ghcr.io/clesyde-os/$ARCH-hassio-supervisor"
+          ref="$image:2026.11.0.8"
+          docker pull --platform "linux/$PLATFORM" "$ref"
+          docker image inspect --format '{{json .RepoDigests}}' "$ref" | jq -e --arg exact "$image@$DIGEST" 'index($exact) != null'
+          test "$(docker image inspect --format '{{.Architecture}}' "$ref")" = "$PLATFORM"
+          test "$(docker image inspect --format '{{index .Config.Labels "io.hass.version"}}' "$ref")" = 2026.11.0.8
+          test "$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.title"}}' "$ref")" = "Clesyde Supervisor"
+          cosign verify --certificate-identity "https://github.com/Clesyde-OS/supervisor/.github/workflows/clesyde-publish-safe8.yaml@refs/heads/clesyde/publish-safe8-20261127" \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com "$image@$DIGEST" >/dev/null
+          printf 'PASS %s using device credentials; catalogues unchanged\n' "$ref"
